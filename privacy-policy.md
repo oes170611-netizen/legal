@@ -26,7 +26,7 @@ Our guiding principle is to collect only what we need to make NutriCore work.
 
 ### Identity and access
 
-When you register for NutriCore, we collect your email address and password (stored as a salted BCrypt hash, never in plaintext). We use a verification step before your account is created — an unverified signup is held temporarily and only becomes a real account once you confirm your email. We use your email to authenticate you (via JWT-based sessions), send account-related notices, and, where you opt in, product updates.
+When you register for NutriCore, we collect your email address and password(stored only after encryption). We use a verification step before your account is created an signup is held temporarily and only becomes a real account once you confirm your email. We use your email to authenticate you, send account-related notices, and, where you opt in, product updates.
 
 ### Health, fitness, and nutrition data
 
@@ -44,14 +44,14 @@ We use this data to run the core functionality of the app: tracking, recommendat
 
 To power the AI assistant and food recognition, parts of your data are sent to third-party AI infrastructure we use as processors:
 
-- Chat messages and relevant context (e.g., your recent logs) are sent to Groq, our AI inference provider, to generate responses.
-- Your nutrition queries may be matched against a knowledge base of food data using vector search (retrieval-augmented generation) to ground the assistant's answers in accurate nutrition facts.
+- Chat messages and relevant context are sent to our AI inference provider, to generate responses.
+- Your nutrition queries may be matched against a knowledge base of food data using vector search to ground the assistant's answers in accurate nutrition facts.
 
 These providers process this data on our behalf to deliver the feature; they do not use it to train their own models except as disclosed in their own terms, and we choose providers that commit to not using submitted data for model training where possible.
 
 ### Advertising
 
-If you use the free tier, NutriCore may show ads via Google AdMob, including rewarded ads (which unlock in-app perks) and interstitial ads. To verify rewarded ads, ad-completion signals are validated server-side (server-side verification), which involves your device and Google's ad servers exchanging a signed callback with us — this is used only to confirm ad completion and prevent reward fraud, not to build an advertising profile of you beyond what AdMob itself does. AdMob may set identifiers and collect device information under Google's own privacy policy; where required, we request your consent before showing personalized ads.
+AdMob ads shown in NutriCore are non-personalized — they are not based on your browsing or app usage history. AdMob may still collect basic device and request data (like device type and general location) to serve ads and prevent fraud, per Google's Privacy Policy.
 
 ### Device and log data
 
@@ -71,11 +71,8 @@ NutriCore may request permission for Health Connect (steps/activity) and notific
 
 **To provide the service.** We use third-party subprocessors to run the app, including:
 
-- Cloud hosting and database infrastructure for storing your account and log data.
-- **Railway** for hosting and our MySQL database.
-- **Groq** for AI inference powering the chat assistant.
-- **ChromaDB** for vector search / nutrition knowledge retrieval (RAG).
-- **Google AdMob** for advertising.
+- Cloud hosting and database infrastructure for storing your account and log data and numerous other services such as AI inference powering the chat assistant,
+  vector search / nutrition knowledge retrieval for nutrition related logging and knowledge and advertising services.
 
 **No human reviews your content** except in limited cases — for example, investigating a bug that broke your data, or a support request you've raised — and only to the extent needed to resolve it.
 
@@ -98,7 +95,6 @@ Regardless of where you're located, you generally have the right to:
 - **Correct** inaccurate personal information.
 - **Delete** your personal information, subject to certain limits (e.g., data we must retain for legal/billing reasons). Deleting certain data may mean parts of the app stop working, and full deletion may require closing your account.
 - **Restrict or object** to certain processing of your data.
-- **Export** your data (your logged foods, workouts, weight history, and chat history) in a portable format.
 - **Not be discriminated against** for exercising these rights — we won't charge you more or degrade your service because you did.
 
 To exercise these rights, contact us at **nutricoreapp1@gmail.com**. We may need to verify your identity (at minimum, your account email) before acting on a request.
@@ -143,9 +139,6 @@ We may update this policy as the app evolves and to comply with applicable law. 
 Questions, comments, or concerns about this policy or your data? Contact us at **nutricoreapp1@gmail.com**.
 
 ---
-
-**Notes for Omer (remove before publishing):**
-- "Immediate" deletion above assumes you're not running scheduled DB backups/snapshots on Railway. If you turn those on later, add a line noting backups are purged on Railway's rotation schedule (check Railway's retention period and update this doc).
-- No registered company/LLC yet, so this doc refers to "the NutriCore team" instead of a legal entity name — deliberate, since claiming an unregistered name as a company could misrepresent your legal structure. If/when you incorporate, swap this for the real entity name. Until then, your Google Play/Apple developer account name is the actual legally responsible party — worth checking that matches what you'd want visible if this ever gets scrutinized.
+If/when you incorporate, swap this for the real entity name. Until then, your Google Play/Apple developer account name is the actual legally responsible party — worth checking that matches what you'd want visible if this ever gets scrutinized.
 - Draft only, not legal advice — worth a lawyer's pass before shipping, especially if you pick up EU/California users (GDPR/CCPA add specific disclosure requirements around AI processing of health data).
 - 
