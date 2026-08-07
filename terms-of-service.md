@@ -40,7 +40,7 @@ If we introduce paid plans or in-app purchases in the future, we'll update these
 
 - You may cancel your account at any time from within the app.
 - Upon cancellation, your account and content become inaccessible immediately. Your personal data is permanently deleted from our active database immediately upon request. (If we introduce scheduled backups in the future, deleted data may briefly persist in a backup until it's purged — see our Privacy Policy for the current state of this.)
-- We cannot recover your information once it has been deleted, so export anything you want to keep before canceling.
+- We cannot recover your information once it has been deleted.
 - We reserve the right to suspend or terminate your account and refuse current or future use of the Services, for any reason, at any time — for example, violation of these Terms, abuse of the rewarded-ad system, or activity that risks the security or integrity of the Service.
 - Abusive, threatening, or harassing conduct toward anyone on the NutriCore team will result in immediate account termination.
 
@@ -57,7 +57,7 @@ We intend to keep maintaining NutriCore for the long haul, but as a small/indepe
 - Your use of the Services is at your sole risk. We provide the Services on an "as is" and "as available" basis, without uptime guarantees.
 - We take reasonable measures to protect your data, including encrypting data in transit (TLS) and hashing passwords. See our Privacy Policy for full details.
 - You agree that NutriCore may process your data as described in our Privacy Policy, and for no other purpose.
-- We use third-party infrastructure providers to run the Service, including Railway (hosting and database), Groq (AI inference for the assistant), ChromaDB (nutrition knowledge retrieval), and Google AdMob (advertising). These providers process data on our behalf as described in our Privacy Policy.
+- We use third-party infrastructure providers to run the Service, including hosting and database, AI inference for the assistant,nutrition knowledge retrieval, and advertising. These providers process data on our behalf as described in our Privacy Policy.
 - As described in our Privacy Policy, we do not access your content except in limited cases (e.g., helping you with a support request, fixing a broken automated process, or investigating suspected abuse), and we do not disclose your data to third parties except as required by law or as described in our Privacy Policy.
 
 ---
@@ -73,7 +73,7 @@ We intend to keep maintaining NutriCore for the long haul, but as a small/indepe
 
 ## Liability
 
-You agree that the NutriCore team is not liable to you or any third party for damages of any kind resulting from your use of the Services, inability to access your data, or unauthorized access to your account or data. We are also not liable for damages related to third-party services we integrate with (e.g., Groq, ChromaDB, Railway, AdMob) that are outside our direct control.
+You agree that the NutriCore team is not liable to you or any third party for damages of any kind resulting from your use of the Services, inability to access your data, or unauthorized access to your account or data. We are also not liable for damages related to third-party services we integrate with that are outside our direct control.
 
 Nothing in these Terms is intended to provide medical advice. NutriCore's calorie, macro, and activity estimates are informational only and are not a substitute for professional medical or nutritional advice. Consult a qualified professional before making significant changes to your diet or exercise routine, especially if you have an existing health condition.
 
@@ -85,9 +85,3 @@ If you have a question about these Terms, contact us at **nutricoreapp1@gmail.co
 
 ---
 
-**Notes for Omer (remove before publishing):**
-- No API is offered currently, so I dropped that whole section from the 37signals template — add it back if you ever expose a public API.
-- No paid tier yet, so "Payment, Refunds, and Plan Changes" was simplified to a short "Cost and Payment" note. Expand this properly once/if you add subscriptions or in-app purchases (refund policy, billing cycle terms, etc. will need real content then).
-- Added a short medical-disclaimer paragraph under Liability since NutriCore gives calorie/macro/health-adjacent output — this is standard for fitness/nutrition apps and worth keeping even after a lawyer's pass.
-- Same entity caveat as the privacy policy: "the NutriCore team" is used in place of a company name since there's no registered LLC yet.
-- Draft only, not legal advice.
